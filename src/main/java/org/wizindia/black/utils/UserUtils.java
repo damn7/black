@@ -27,7 +27,7 @@ public class UserUtils {
     }
 
     public UserResponse getEncryptedUser(User user) {
-        return new UserResponse(encrypter.encrypt(user.getId().toString()), user.getLogin(), user.getRoles());
+        return new UserResponse(user.getLogin(), user.getRoles());
     }
 
     public Set<Role> getRoleSet(Integer id) {
